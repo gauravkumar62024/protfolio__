@@ -1,0 +1,211 @@
+@import "tailwindcss";
+
+@variant dark (.dark &);
+
+:root {
+  --page-bg: #f3f5f8;
+  --surface: rgba(255, 255, 255, 0.8);
+  --surface-strong: rgba(255, 255, 255, 0.95);
+  --text-primary: #112036;
+  --text-secondary: #2f415f;
+  --text-muted: #607089;
+  --accent-strong: #0f5f8d;
+  --accent-soft: #ddeffc;
+  --line-subtle: rgba(17, 32, 54, 0.12);
+  --line-strong: rgba(17, 32, 54, 0.22);
+}
+
+:root.dark {
+  --page-bg: #0e141d;
+  --surface: rgba(18, 29, 44, 0.82);
+  --surface-strong: rgba(16, 25, 38, 0.95);
+  --text-primary: #e8eef8;
+  --text-secondary: #c1cde1;
+  --text-muted: #8ea2be;
+  --accent-strong: #84c4ef;
+  --accent-soft: rgba(132, 196, 239, 0.15);
+  --line-subtle: rgba(161, 182, 214, 0.2);
+  --line-strong: rgba(161, 182, 214, 0.38);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 10% 10%, rgba(139, 190, 230, 0.18), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(88, 118, 155, 0.14), transparent 48%),
+    var(--page-bg);
+  color: var(--text-primary);
+  font-family: var(--font-manrope), "Segoe UI", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.heading-font {
+  font-family: var(--font-source-serif), Georgia, serif;
+}
+
+.section-shell {
+  padding-top: 3.75rem;
+}
+
+.section-heading-wrap {
+  max-width: 52rem;
+}
+
+.section-kicker {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.section-title {
+  margin-top: 0.65rem;
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.12;
+  color: var(--text-primary);
+}
+
+.section-description {
+  margin-top: 0.9rem;
+  max-width: 42rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.editorial-card {
+  border: 1px solid var(--line-subtle);
+  background: var(--surface);
+  border-radius: 0.95rem;
+  box-shadow: 0 8px 30px rgba(6, 20, 40, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.editorial-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  box-shadow: 0 14px 40px rgba(6, 20, 40, 0.12);
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--line-subtle);
+  border-radius: 9999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-disabled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.65rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--accent-strong);
+  border: 1px solid var(--accent-strong);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  border: 1px solid var(--line-strong);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-strong);
+  color: var(--accent-strong);
+}
+
+.btn-disabled {
+  border: 1px dashed var(--line-strong);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.status-badge {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.status-accepted {
+  background: rgba(25, 145, 102, 0.16);
+  color: #147654;
+}
+
+.status-under-review {
+  background: rgba(217, 132, 18, 0.2);
+  color: #925806;
+}
+
+.status-submitted {
+  background: rgba(31, 89, 166, 0.18);
+  color: #1f58a4;
+}
+
+.text-link {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.text-link:hover {
+  opacity: 0.85;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
