@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gauravkumar62024.github.io/protfolio__/sitemap.xml
