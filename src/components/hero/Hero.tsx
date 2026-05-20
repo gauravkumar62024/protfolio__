@@ -8,7 +8,7 @@ const Hero = () => {
     <section id="home" className="section-shell pt-16 md:pt-24">
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
         <div className="space-y-6">
-          <p className="section-kicker">NLP Research Portfolio</p>
+          <p className="section-kicker"></p>
           <h1 className="heading-font text-4xl leading-tight text-[var(--text-primary)] md:text-6xl">
             {hero.name}
           </h1>
