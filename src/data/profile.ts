@@ -10,7 +10,7 @@ export const profileContent: ProfileContent = {
     institution: "Indian Institute of Science Education and Research (IISER) Bhopal",
     summary:
       "I build reliable NLP systems for misinformation detection, multimodal verification, and LLM-based reasoning. My work spans general fact-checking, multilingual NLP, and vision-language grounding with a strong focus on measurable research impact.",
-    profileImage: "/protfolio__/gaurav.jpg",
+    profileImage: "/gaurav.jpg",
     primaryCta: {
       label: "Email Me",
       href: "mailto:gaurav22@iiserb.ac.in",
